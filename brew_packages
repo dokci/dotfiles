@@ -1,9 +1,16 @@
 #!/bin/sh
 
 packages=(
+    'coreutils'
+    'findutils'
+    'binutils'
+    'patchutils'
+    'gdb'
+    'htop-osx'
     'caskroom/cask/brew-cask'
     'git'
-    'hub'
+    'git-flow'
+    'gh'
     'node'
     'mercurial'
     'mysql'
@@ -12,6 +19,12 @@ packages=(
     'pyenv-virtualenvwrapper'
     'tmux'
     'vim'
+    'docker'
+    'fig'
+    'xz'
+    'fleetctl'
+    'rename'
+    ''
 )
 
 function brew_install() {
