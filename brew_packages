@@ -35,7 +35,9 @@ packages=(
     'reattach-to-user-namespace'
     'tmux'
     'vim'
+    'go'
     'docker'
+    'boot2docker'
     'fig'
     'xz'
     'fleetctl'
@@ -46,7 +48,6 @@ packages=(
     'wget'
     'curl'
     'nmap'
-    'mysql'
     'nginx'
     'libyaml'
     'zsh'
@@ -61,17 +62,12 @@ function brew_install() {
     echo "Running brew doctor..."
     brew doctor
 
-    echo "\nInstalling brew formulae..."
+    echo "\nInstalling brew cask..."
     for package in "${local_packages[@]}"; do
         echo "\n\n"
         echo "Installing $package next."
         brew install $package
-        if [ $package == "mysql" ]
-        then
-            echo "Tapping the brew binaries..."
-            brew tap homebrew/binary
-        fi
-        else if [ $package == "brew-cask" ] 
+        if [ $package == "brew-cask" ]
         then
             echo "Tapping the phinze/homebrew-cask..."
             brew tap phinze/homebrew-cask
