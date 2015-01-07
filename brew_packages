@@ -7,24 +7,49 @@ packages=(
     'patchutils'
     'gdb'
     'htop-osx'
-    'caskroom/cask/brew-cask'
-    'git'
-    'git-flow'
+    'hg'
+    'bazaar'
+    'sshfs'
+    'pkg-config'
+    'brew-cask'
+    'ctags'
+    'python'
     'gh'
+    'git-flow'
+    'git-extras'
+    'tree'
     'node'
     'mercurial'
-    'mysql'
+    'gnupg'
+    'ack'
+    'automake'
+    'gcc'
+    'openssl'
+    'awscli'
+    'ruby'
+    'ruby-install'
+    'gnupg'
     'packer'
     'pyenv'
     'pyenv-virtualenvwrapper'
+    'reattach-to-user-namespace'
     'tmux'
     'vim'
     'docker'
     'fig'
     'xz'
     'fleetctl'
+    'unzip'
+    'chgems'
     'rename'
-    ''
+    'md5sha1sum'
+    'wget'
+    'curl'
+    'nmap'
+    'mysql'
+    'nginx'
+    'libyaml'
+    'zsh'
 )
 
 function brew_install() {
@@ -45,6 +70,11 @@ function brew_install() {
         then
             echo "Tapping the brew binaries..."
             brew tap homebrew/binary
+        fi
+        else if [ $package == "brew-cask" ] 
+        then
+            echo "Tapping the phinze/homebrew-cask..."
+            brew tap phinze/homebrew-cask
         fi
     done
 }
