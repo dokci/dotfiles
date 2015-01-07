@@ -13,6 +13,7 @@ applications=(
     'github'
     'google-chrome'
     'google-drive'
+    'chromium'
     'iterm2'
     'mou'
     'mysqlworkbench'
